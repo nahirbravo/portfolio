@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fondos */
+  --color-bg-base: #0A0A0F;
+  --color-bg-surface: #12121A;
+  --color-bg-elevated: #1A1A26;
+  --color-bg-hover: #1E2030;
+
+  /* Acentos */
+  --color-accent-cyan: oklch(75% 0.18 195);
+  --color-accent-cyan-dim: oklch(60% 0.14 195);
+  --color-accent-violet: oklch(65% 0.22 290);
+  --color-accent-violet-dim: oklch(55% 0.17 290);
+  --color-accent-green: oklch(72% 0.17 145);
+
+  /* Texto */
+  --color-text-primary: #F1F5F9;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #475569;
+
+  /* Bordes */
+  --color-border: #1E2030;
+  --color-border-bright: #2A2D40;
+
+  /* Tipografía */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Radios */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+
+  /* Sombras */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-glow-cyan: 0 0 20px oklch(75% 0.18 195 / 0.3);
+  --shadow-glow-violet: 0 0 20px oklch(65% 0.22 290 / 0.3);
+}
+
+/* Reset base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-bright);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* Selección de texto */
+::selection {
+  background: oklch(65% 0.22 290 / 0.35);
+  color: var(--color-text-primary);
+}
