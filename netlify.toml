@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  # Las VITE_ vars se embeben intencionalmente en el bundle del cliente.
+  # La anon key de Supabase es una clave pública por diseño.
+  SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_ANON_KEY,VITE_SUPABASE_URL"
